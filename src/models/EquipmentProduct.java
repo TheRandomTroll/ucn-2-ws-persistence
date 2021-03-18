@@ -19,4 +19,12 @@ public class EquipmentProduct extends Product {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        String output = super.toString() +
+                "Type: " + type + "\n" +
+                "Description: " + description + "\n\n";
+        return output;
+    }
 }

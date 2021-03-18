@@ -21,7 +21,7 @@ INSERT INTO Products(Barcode, Name, PurchasePrice, SalesPrice, RentPrice, Countr
 INSERT INTO Products(Barcode, Name, PurchasePrice, SalesPrice, RentPrice, CountryOfOrigin, MinStock, ProductTypeId)
 	VALUES(36127832, 'Necklace for Women', 699.99, 899.99, 449.99, 'USA', 50, 2);
 	INSERT INTO Products(Barcode, Name, PurchasePrice, SalesPrice, RentPrice, CountryOfOrigin, MinStock, ProductTypeId)
-	VALUES(36127832, 'Ring for Men', 499.99, 599.99, 249.99, 'USA', 20, 2);
+	VALUES(36127833, 'Ring for Men', 499.99, 599.99, 249.99, 'USA', 20, 2);
 INSERT INTO Products(Barcode, Name, PurchasePrice, SalesPrice, RentPrice, CountryOfOrigin, MinStock, ProductTypeId)
 	VALUES(87612398, 'Semi-automatic Pistol, Desert Eagle', 349.99, 479.99, 139.99, 'USA', 30, 3);
 

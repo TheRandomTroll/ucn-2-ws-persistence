@@ -33,20 +33,21 @@ public class OrderDB implements OrderDBIF {
 	@Override
 	public SaleOrder addOrder(List<Product> products, Customer customer) {
 		try {
-			SaleOrder o = new SaleOrder();
+			SaleOrder order = new SaleOrder();
 			Date date = Date.valueOf(LocalDate.now());
 			Date deliveryDate = Date.valueOf(LocalDate.now().plusDays(7));
 			double amount = 0.0;
 			for (Product p : products) {
-				amount += p.getPurchasePrice();
+				amount += p.getSalesPrice();
 			}
 			DeliveryStatus status = DeliveryStatus.PROCESSING;
 
-			o.setCustomer(customer);
-			o.setDate(date);
-			o.setAmount(amount);
-			o.setDeliveryStatus(status);
-			o.setDeliveryDate(deliveryDate);
+			order.setCustomer(customer);
+			order.setDate(date);
+			order.setAmount(amount);
+			order.setDeliveryStatus(status);
+			order.setDeliveryDate(deliveryDate);
+			order.setProducts(products);
 
 			addOrderPS.setInt(1, customer.getId());
 			addOrderPS.setDate(2, date);
@@ -54,7 +55,7 @@ public class OrderDB implements OrderDBIF {
 			addOrderPS.setInt(4, status.getValue());
 			addOrderPS.setDate(5, deliveryDate);
 
-			addOrderPS.executeQuery();
+			addOrderPS.executeUpdate();
 
 			int orderId = 0;
 
@@ -65,6 +66,8 @@ public class OrderDB implements OrderDBIF {
 				throw new SQLException("Could not insert order, no ID obtained.");
 			}
 
+			order.setId(orderId);
+
 			Map<Integer, Long> counted = products.stream()
 					.collect(Collectors.groupingBy(Product::getId, Collectors.counting()));
 
@@ -73,7 +76,7 @@ public class OrderDB implements OrderDBIF {
 				addOrderItemsPS.setInt(2, entry.getKey());
 				addOrderItemsPS.setInt(3, entry.getValue().intValue());
 
-				addOrderItemsPS.executeQuery();
+				addOrderItemsPS.executeUpdate();
 			}
 
 			return order;
@@ -81,6 +84,8 @@ public class OrderDB implements OrderDBIF {
 		} catch (SQLException e) {
 			System.out.println("Could not insert order. Exception: " + e.getMessage());
 		}
+
+		return null;
 	}
 
 }

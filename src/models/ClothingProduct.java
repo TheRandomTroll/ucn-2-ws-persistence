@@ -19,4 +19,12 @@ public class ClothingProduct extends Product {
     public void setColour(String colour) {
         this.colour = colour;
     }
+
+    @Override
+    public String toString() {
+        String output = super.toString() +
+                "Size: " + size + "\n" +
+                "Colour: " + colour + "\n\n";
+        return output;
+    }
 }

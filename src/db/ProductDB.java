@@ -47,6 +47,16 @@ public class ProductDB implements ProductDBIF {
 		return products;
 	}
 
+	@Override
+	public Product findByBarcode(int barcode) {
+		for (Product p : this.getProducts()) {
+			if (p.getBarcode() == barcode) {
+				return p;
+			}
+		}
+		return null;
+	}
+
 	private List<Product> buildObjects(ResultSet rs) {
 		List<Product> products = new ArrayList<>();
 
@@ -135,5 +145,4 @@ public class ProductDB implements ProductDBIF {
 		}
 		return null;
 	}
-
 }

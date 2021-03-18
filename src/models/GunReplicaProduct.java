@@ -19,4 +19,12 @@ public class GunReplicaProduct extends Product {
     public void setMaterial(String material) {
         this.material = material;
     }
+
+    @Override
+    public String toString() {
+        String output = super.toString() +
+                "Calibre: " + calibre + "\n" +
+                "Material: " + material + "\n\n";
+        return output;
+    }
 }

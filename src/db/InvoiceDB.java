@@ -32,7 +32,7 @@ public class InvoiceDB implements InvoiceDBIF {
 		i.setInvoiceNo(invoiceNo);
 		double amount = 0.0;
 		for (Product p : order.getProducts()) {
-			amount += p.getPurchasePrice();
+			amount += p.getSalesPrice();
 		}
 
 		i.setAmount(amount);

@@ -49,4 +49,27 @@ public class Invoice {
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Invoice #" + invoiceNo + "\n");
+		sb.append("Customer: " + order.getCustomer().toString() + "\n");
+		sb.append("Order date: " + order.getDate().toString() + "\n");
+		sb.append("Products: \n");
+		for(Product p : order.getProducts()) {
+			Class productClass = p.getClass();
+			if (productClass == ClothingProduct.class) {
+				sb.append(((ClothingProduct)p).toString());
+			} else if (productClass == EquipmentProduct.class) {
+				sb.append(((EquipmentProduct)p).toString());
+			} else {
+				sb.append(((GunReplicaProduct)p).toString());
+			}
+		}
+		sb.append("=====================\n");
+		sb.append("TOTAL: DKK" + amount + "\n");
+		sb.append("=====================\n");
+		return sb.toString();
+	}
 }

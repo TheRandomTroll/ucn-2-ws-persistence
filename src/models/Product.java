@@ -87,16 +87,11 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "Product{" +
-				"id=" + id +
-				", barcode=" + barcode +
-				", name='" + name + '\'' +
-				", purchasePrice=" + purchasePrice +
-				", salesPrice=" + salesPrice +
-				", rentPrice=" + rentPrice +
-				", countryOfOrigin='" + countryOfOrigin + '\'' +
-				", minStock=" + minStock +
-				", productType=" + productType +
-				'}';
+		StringBuilder sb = new StringBuilder();
+		sb.append("-----| Product #" + barcode + " |-----\n");
+		sb.append(name + '\n');
+		sb.append("Product type: " + productType.toString() + '\n');
+		sb.append("Price: DKK" + salesPrice + '\n');
+		return sb.toString();
 	}
 }
