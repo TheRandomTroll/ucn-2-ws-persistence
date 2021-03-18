@@ -1,4 +1,4 @@
-<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>1270</x><y>580</y><w>190</w><h>160</h></coordinates><panel_attributes>SaleOrder
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>1270</x><y>582</y><w>190</w><h>160</h></coordinates><panel_attributes>SaleOrder
 Package::models
 --
 -id:int
@@ -7,7 +7,7 @@ Package::models
 -date:LocalDate
 -amount:double
 -deliveryStatus:DeliveryStatus
--deliveryDate:Date</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1060</x><y>580</y><w>160</w><h>140</h></coordinates><panel_attributes>Customer
+-deliveryDate:Date</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1060</x><y>582</y><w>160</w><h>140</h></coordinates><panel_attributes>Customer
 Package::models
 --
 -id:int
@@ -15,7 +15,7 @@ Package::models
 -address:string
 -zipcode:int
 -city:string
--phoneno:string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1210</x><y>640</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;60;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1500</x><y>590</y><w>150</w><h>180</h></coordinates><panel_attributes>Product
+-phoneno:string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1210</x><y>642</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;60;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1500</x><y>592</y><w>150</w><h>180</h></coordinates><panel_attributes>Product
 Package::models
 --
 -id: int
@@ -26,48 +26,47 @@ Package::models
 -rentPrice:double
 -countryOfOrigin:string
 -productType:ProductType
--minStock:int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1270</x><y>760</y><w>190</w><h>130</h></coordinates><panel_attributes>Invoice
+-minStock:int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1270</x><y>762</y><w>190</w><h>130</h></coordinates><panel_attributes>Invoice
 Package::models
 --
 -id:int
 -order:Order
 -invoiceNo:int
 -paymentDate:Date
--amount:double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1450</x><y>650</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1260</x><y>410</y><w>190</w><h>130</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+-amount:double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1450</x><y>652</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1260</x><y>412</y><w>190</w><h>130</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
 DeliveryStatus
 Package::models.enums
 --
 -Processing
 -Processed
 -Dispatched
--Delivered</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1350</x><y>530</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1050</x><y>340</y><w>850</w><h>560</h></coordinates><panel_attributes>package::models
-bg=#E4FDFF</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>460</x><y>300</y><w>550</w><h>520</h></coordinates><panel_attributes>package::controllers
-bg=#E4FDFF</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>780</x><y>380</y><w>210</w><h>160</h></coordinates><panel_attributes>CustomerController
+-Delivered</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1350</x><y>532</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1050</x><y>342</y><w>850</w><h>560</h></coordinates><panel_attributes>package::models
+bg=#E4FDFF</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>460</x><y>302</y><w>550</w><h>520</h></coordinates><panel_attributes>package::controllers
+bg=#E4FDFF</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>780</x><y>382</y><w>210</w><h>160</h></coordinates><panel_attributes>CustomerController
 Package::controllers
 --
 -customerDb: CustomerDB
 --
 +findByPhoneNo(id):Customer
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>380</y><w>230</w><h>110</h></coordinates><panel_attributes>InvoiceController
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>382</y><w>230</w><h>110</h></coordinates><panel_attributes>InvoiceController
 Package::controllers
 --
 -invoiceDb: InvoiceDB
 --
-+createInvoice(order)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>600</y><w>250</w><h>190</h></coordinates><panel_attributes>OrderController
++createInvoice(order)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>602</y><w>250</w><h>190</h></coordinates><panel_attributes>OrderController
 Package::controllers
 --
 -orderDb: OrderDB
 -customerController:CustomerController
--productController:ProductController
 -invoiceController:InvoiceController
 --
-+createOrder(products, customerPhoneNo)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>620</y><w>230</w><h>160</h></coordinates><panel_attributes>ProductController
++createOrder(products, customerPhoneNo)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>622</y><w>230</w><h>160</h></coordinates><panel_attributes>ProductController
 Package::controllers
 --
 -productDb: ProductDB
 --
 +getProducts():List&lt;Product&gt;
-+findByBarcode(barcode):Product</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>970</x><y>1240</y><w>260</w><h>160</h></coordinates><panel_attributes>CustomerDB
++findByBarcode(barcode):Product</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>970</x><y>1242</y><w>260</w><h>110</h></coordinates><panel_attributes>CustomerDB
 Package::db
 --
 -findByPhoneNoPS:PreparedStatement
@@ -79,7 +78,104 @@ _-FIND_BY_PHONE_NO_Q:string_
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>1050</y><w>270</w><h>180</h></coordinates><panel_attributes>OrderDB
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>1052</y><w>270</w><h>130</h></coordinates><panel_attributes>OrderDB
+Package::db
+--
+-addOrderPS:PreparedStatement
+-addOrderItemsPS:PreparedStatement
+_-ADD_ORDER_Q_
+_-ADD_ORDER_ITEMS_Q_
+--
++addOrder(products, customer)
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>1242</y><w>260</w><h>100</h></coordinates><panel_attributes>InvoiceDB
+Package::db
+--
+insertInvoicePS:PreparedStatement
+_-INSERT_INVOICE_Q:string_
+--
++addInvoice(order)
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>0</x><y>892</y><w>1260</w><h>780</h></coordinates><panel_attributes>Package: db
+bg=#E4FDFF
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>1052</y><w>210</w><h>170</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+CustomerDBIF
+Package::db.interfaces
+--
++findByPhoneNo(phoneNo)
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>1252</y><w>220</w><h>180</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+ProductDBIF
+Package::db.interfaces
+--
++getProducts():List&lt;Product&gt;
++findByBarcode(barcode):Product
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>1252</y><w>230</w><h>190</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+OrderDBIF
+Package::db.interfaces
+--
++addOrder(products, customer)
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>1052</y><w>220</w><h>170</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+InvoiceDBIF
+Package::db.interfaces
+--
++addInvoice(order)
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>40</x><y>982</y><w>540</w><h>520</h></coordinates><panel_attributes>Package: interfaces
+bg=#E4FDFF
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1250</x><y>382</y><w>410</w><h>170</h></coordinates><panel_attributes>package::enums
+bg=#E4FDFF</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>600</x><y>2</y><w>230</w><h>150</h></coordinates><panel_attributes>package::ui
+bg=#E4FDFF</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>610</x><y>32</y><w>210</w><h>110</h></coordinates><panel_attributes>MainMenu
+Package::ui
+--
+-OrderController orderController;
+-ProductController productController;
+--
++run()
++createOrder()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>820</x><y>1492</y><w>220</w><h>170</h></coordinates><panel_attributes>DBConnection
+Package::db
+{Some Properties}
+--
+-connection:Connection
+_-SERVER_NAME:string_
+_-PORT_NUMBER:int_
+_-DATABASE_NAME:string_
+_-PASSWORD:string_
+_-dbConnection:DBConnection_
+--
+_+getInstance():DBConnection_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>1122</y><w>220</w><h>390</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>200;370;200;330;10;330;10;10;30;10</additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>1132</y><w>290</w><h>380</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;360;10;320;270;320;270;10;260;10</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>772</y><w>430</w><h>230</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>410;210;410;120;10;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>782</y><w>30</w><h>290</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;270;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>890</x><y>532</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>482</y><w>80</w><h>140</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;60;120</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>462</y><w>290</w><h>850</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>270;830;250;830;250;410;10;410;10;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>482</y><w>310</w><h>820</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>250;800;290;800;290;480;50;480;50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>1332</y><w>30</w><h>180</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;160;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>970</x><y>1342</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1360</x><y>732</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>10;30;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>532</y><w>100</w><h>70</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>80;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>222</y><w>1330</w><h>620</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>1080;600;1310;600;1310;10;10;10;10;190;100;190</additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>212</y><w>1350</w><h>500</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>1280;480;1330;480;1330;10;10;10;10;440;110;440</additional_attributes></element><element><id>Relation</id><coordinates><x>990</x><y>722</y><w>300</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>280;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1460</x><y>409</y><w>190</w><h>130</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+ProductType
+Package::models.enums
+--
+-Clothing
+-Equipment
+-GunReplica</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>129</y><w>160</w><h>730</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>140;660;140;710;10;710;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>1132</y><w>520</w><h>360</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;.</panel_attributes><additional_attributes>10;310;10;340;450;340;450;10;500;10</additional_attributes></element><element><id>Relation</id><coordinates><x>30</x><y>1120</y><w>1090</w><h>580</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;.</panel_attributes><additional_attributes>40;10;20;10;10;560;1070;560;1070;230</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>1132</y><w>570</w><h>350</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;.</panel_attributes><additional_attributes>10;300;10;330;530;330;530;10;550;10</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>1122</y><w>310</w><h>320</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;.</panel_attributes><additional_attributes>10;10;60;10;60;300;290;300;290;220</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1736</x><y>486</y><w>150</w><h>90</h></coordinates><panel_attributes>ClothingProduct
+Package::models
+--
+-size:string
+-colour:string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1734</x><y>586</y><w>150</w><h>90</h></coordinates><panel_attributes>EquipmentProduct
+Package::models
+--
+-type:string
+-description:string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1734</x><y>686</y><w>150</w><h>90</h></coordinates><panel_attributes>GunReplica
+Package::models
+--
+-calibre:double
+-material:string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1640</x><y>522</y><w>120</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;110;70;110;70;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1640</x><y>622</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1640</x><y>622</y><w>120</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;10;70;120;100;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>970</x><y>982</y><w>270</w><h>240</h></coordinates><panel_attributes>ProductDB
 Package::db
 --
 -getProductsPS:PreparedStatement
@@ -91,98 +187,6 @@ _-GET_CLOTHING_PRODUCTS_Q:string_
 _-GET_EQUIPMENT_PRODUCTS_Q:string_
 _-GET_GUN_REPLICA_PRODUCTS_Q:string_
 --
-+addOrder(products, customer)
-
-
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>1240</y><w>260</w><h>160</h></coordinates><panel_attributes>InvoiceDB
-Package::db
---
-insertInvoicePS:PreparedStatement
-_-INSERT_INVOICE_Q:string_
---
-+addInvoice(order)
-
-
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>0</x><y>890</y><w>1260</w><h>780</h></coordinates><panel_attributes>Package: db
-bg=#E4FDFF
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>1050</y><w>210</w><h>170</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
-CustomerDBIF
-Package::db.interfaces
---
-+findByPhoneNo(phoneNo)
-
-
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>1250</y><w>220</w><h>180</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
-ProductDBIF
-Package::db.interfaces
---
-+getProducts():List&lt;Product&gt;
-+findByBarcode(barcode):Product
-
-
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>1250</y><w>230</w><h>190</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
-OrderDBIF
-Package::db.interfaces
---
-+addOrder(products, customer)
-
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>1050</y><w>220</w><h>170</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
-InvoiceDBIF
-Package::db.interfaces
---
-+addInvoice(order)
-
-
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>40</x><y>980</y><w>540</w><h>520</h></coordinates><panel_attributes>Package: interfaces
-bg=#E4FDFF
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1250</x><y>380</y><w>410</w><h>170</h></coordinates><panel_attributes>package::enums
-bg=#E4FDFF</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>600</x><y>0</y><w>230</w><h>140</h></coordinates><panel_attributes>package::ui
-bg=#E4FDFF</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>610</x><y>30</y><w>210</w><h>100</h></coordinates><panel_attributes>MainMenu
-Package::ui
---
--OrderController orderController;
--ProductController productController;
--CustomerController customerController;
---
-+createOrder()
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>820</x><y>1490</y><w>220</w><h>170</h></coordinates><panel_attributes>DBConnection
-Package::db
-{Some Properties}
---
--connection:Connection
-_-SERVER_NAME:string_
-_-PORT_NUMBER:int_
-_-DATABASE_NAME:string_
-_-PASSWORD:string_
-_-dbConnection:DBConnection_
---
-_+getInstance():DBConnection_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>1120</y><w>220</w><h>390</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>200;370;200;330;10;330;10;10;30;10</additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>1130</y><w>290</w><h>380</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;360;10;320;270;320;270;10;260;10</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>770</y><w>430</w><h>320</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>410;300;410;120;10;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>780</y><w>30</w><h>290</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;270;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>890</x><y>530</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>480</y><w>80</w><h>140</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;60;120</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>460</y><w>290</w><h>850</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>270;830;250;830;250;410;10;410;10;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>480</y><w>310</w><h>820</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>250;800;290;800;290;510;50;510;50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>1390</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>970</x><y>1390</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1360</x><y>730</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>10;30;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>980</x><y>530</y><w>100</w><h>70</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>80;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>220</y><w>1330</w><h>620</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>1080;600;1310;600;1310;10;10;10;10;190;100;190</additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>210</y><w>1350</w><h>500</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>1280;480;1330;480;1330;10;10;10;10;440;110;440</additional_attributes></element><element><id>Relation</id><coordinates><x>990</x><y>720</y><w>300</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>280;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1460</x><y>407</y><w>190</w><h>130</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
-ProductType
-Package::models.enums
---
--Clothing
--Equipment
--GunReplica</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>117</y><w>160</w><h>740</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>140;670;140;720;10;720;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>1130</y><w>520</w><h>360</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;.</panel_attributes><additional_attributes>10;310;10;340;450;340;450;10;500;10</additional_attributes></element><element><id>Relation</id><coordinates><x>30</x><y>1118</y><w>1090</w><h>580</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;.</panel_attributes><additional_attributes>40;10;20;10;10;560;1070;560;1070;280</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>1130</y><w>570</w><h>350</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;.</panel_attributes><additional_attributes>10;300;10;330;530;330;530;10;550;10</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>1120</y><w>310</w><h>320</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;.</panel_attributes><additional_attributes>10;10;60;10;60;300;290;300;290;280</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1736</x><y>484</y><w>150</w><h>90</h></coordinates><panel_attributes>ClothingProduct
-Package::models
---
--size:string
--colour:string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1734</x><y>584</y><w>150</w><h>90</h></coordinates><panel_attributes>EquipmentProduct
-Package::models
---
--type:string
--description:string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1734</x><y>684</y><w>150</w><h>90</h></coordinates><panel_attributes>GunReplica
-Package::models
---
--calibre:double
-material:string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1640</x><y>520</y><w>120</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;110;70;110;70;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1640</x><y>620</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1640</x><y>620</y><w>120</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;10;70;120;100;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>970</x><y>1070</y><w>270</w><h>150</h></coordinates><panel_attributes>ProductDB
-Package::db
---
 +getProducts():List&lt;Product&gt;
 +findByBarcode(barcode):Product
 -buildObject(resultSet)
@@ -190,4 +194,4 @@ Package::db
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1561</x><y>524</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>74</y><w>80</w><h>320</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>60;300;60;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>64</y><w>250</w><h>620</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>100;600;10;600;10;10;230;10</additional_attributes></element></diagram>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1561</x><y>526</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>66</y><w>250</w><h>620</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>100;600;10;600;10;10;230;10</additional_attributes></element></diagram>
