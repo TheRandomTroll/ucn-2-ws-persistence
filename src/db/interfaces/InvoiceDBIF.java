@@ -4,5 +4,5 @@ import models.Invoice;
 import models.SaleOrder;
 
 public interface InvoiceDBIF {
-	public Invoice addInvoice(SaleOrder order);
+	Invoice addInvoice(SaleOrder order);
 }
