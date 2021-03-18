@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 import db.interfaces.OrderDBIF;
 import models.Customer;
 import models.Product;
+import models.SaleOrder;
 import models.enums.DeliveryStatus;
 
 public class OrderDB implements OrderDBIF {
@@ -30,19 +31,27 @@ public class OrderDB implements OrderDBIF {
 	}
 
 	@Override
-	public void addOrder(List<Product> products, Customer customer) {
+	public SaleOrder addOrder(List<Product> products, Customer customer) {
 		try {
+			SaleOrder o = new SaleOrder();
 			Date date = Date.valueOf(LocalDate.now());
 			Date deliveryDate = Date.valueOf(LocalDate.now().plusDays(7));
 			double amount = 0.0;
 			for (Product p : products) {
 				amount += p.getPurchasePrice();
 			}
+			DeliveryStatus status = DeliveryStatus.PROCESSING;
+
+			o.setCustomer(customer);
+			o.setDate(date);
+			o.setAmount(amount);
+			o.setDeliveryStatus(status);
+			o.setDeliveryDate(deliveryDate);
 
 			addOrderPS.setInt(1, customer.getId());
 			addOrderPS.setDate(2, date);
 			addOrderPS.setDouble(3, amount);
-			addOrderPS.setInt(4, DeliveryStatus.PROCESSING.getValue());
+			addOrderPS.setInt(4, status.getValue());
 			addOrderPS.setDate(5, deliveryDate);
 
 			addOrderPS.executeQuery();
@@ -66,6 +75,8 @@ public class OrderDB implements OrderDBIF {
 
 				addOrderItemsPS.executeQuery();
 			}
+
+			return order;
 
 		} catch (SQLException e) {
 			System.out.println("Could not insert order. Exception: " + e.getMessage());

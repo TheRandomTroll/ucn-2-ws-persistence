@@ -4,7 +4,8 @@ import java.util.List;
 
 import models.Customer;
 import models.Product;
+import models.SaleOrder;
 
 public interface OrderDBIF {
-	void addOrder(List<Product> products, Customer customer);
+	SaleOrder addOrder(List<Product> products, Customer customer);
 }

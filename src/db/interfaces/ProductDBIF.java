@@ -6,4 +6,6 @@ import models.Product;
 
 public interface ProductDBIF {
 	List<Product> getProducts();
+
+	Product findByBarcode();
 }
