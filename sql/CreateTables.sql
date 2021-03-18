@@ -3,8 +3,8 @@ USE dmaj0920_1086341;
 DROP TABLE IF EXISTS Customers;
 DROP TABLE IF EXISTS SaleOrders;
 DROP TABLE IF EXISTS DeliveryStatuses;
-DROP TABLE IF EXISTS ProductTypes;
 DROP TABLE IF EXISTS Products;
+DROP TABLE IF EXISTS ProductTypes;
 DROP TABLE IF EXISTS ClothingProducts;
 DROP TABLE IF EXISTS EquipmentProducts;
 DROP TABLE IF EXISTS GunReplicaProducts;
@@ -32,6 +32,7 @@ CREATE TABLE ProductTypes(
 
 CREATE TABLE Products(
 	Id INT IDENTITY(1,1) PRIMARY KEY,
+	Barcode INT,
 	Name VARCHAR(100),
 	PurchasePrice FLOAT,
 	SalesPrice FLOAT,
@@ -58,7 +59,7 @@ CREATE TABLE EquipmentProducts(
 
 CREATE TABLE GunReplicaProducts(
 	Id INT PRIMARY KEY,
-	Caliber FLOAT,
+	Calibre FLOAT,
 	Material VARCHAR(100)
 	FOREIGN KEY (Id) REFERENCES Products(Id)
 );

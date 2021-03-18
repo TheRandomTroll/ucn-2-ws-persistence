@@ -12,12 +12,12 @@ INSERT INTO ProductTypes(Type) VALUES('Gun Replica');
 INSERT INTO Customers(Name, Address, Zipcode, City, PhoneNo) VALUES ('Mihail Gerginov', 'Sofiendalsvej 62', 9000, 'Aalborg', '+4512345678');
 INSERT INTO Customers(Name, Address, Zipcode, City, PhoneNo) VALUES ('UCN Western', 'Sofiendalsvej 60', 9000, 'Aalborg', '+4587654321');
 
-INSERT INTO Products(Name, PurchasePrice, SalesPrice, RentPrice, CountryOfOrigin, MinStock, ProductTypeId)
-	VALUES('Men''s Shirt', 199.99, 249.99, 109.99, 'USA', 50, 1);
-INSERT INTO Products(Name, PurchasePrice, SalesPrice, RentPrice, CountryOfOrigin, MinStock, ProductTypeId)
-	VALUES('Necklace for Women', 699.99, 899.99, 449.99, 'USA', 50, 2);
-INSERT INTO Products(Name, PurchasePrice, SalesPrice, RentPrice, CountryOfOrigin, MinStock, ProductTypeId)
-	VALUES('Semi-automatic Pistol, Desert Eagle', 349.99, 479.99, 139.99, 'USA', 30, 3);
+INSERT INTO Products(Barcode, Name, PurchasePrice, SalesPrice, RentPrice, CountryOfOrigin, MinStock, ProductTypeId)
+	VALUES(16482910, 'Men''s Shirt', 199.99, 249.99, 109.99, 'USA', 50, 1);
+INSERT INTO Products(Barcode, Name, PurchasePrice, SalesPrice, RentPrice, CountryOfOrigin, MinStock, ProductTypeId)
+	VALUES(36127832, 'Necklace for Women', 699.99, 899.99, 449.99, 'USA', 50, 2);
+INSERT INTO Products(Barcode, Name, PurchasePrice, SalesPrice, RentPrice, CountryOfOrigin, MinStock, ProductTypeId)
+	VALUES(87612398, 'Semi-automatic Pistol, Desert Eagle', 349.99, 479.99, 139.99, 'USA', 30, 3);
 
 INSERT INTO ClothingProducts(Id, Size, Colour) VALUES(1, 'L', 'Beige');
 INSERT INTO EquipmentProducts(Id, Type, Description) VALUES(2, 'Necklace', 'A stylish necklace for all your eccentric parties!');

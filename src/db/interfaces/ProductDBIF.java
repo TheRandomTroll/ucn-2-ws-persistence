@@ -1,5 +1,9 @@
 package db.interfaces;
 
+import java.util.List;
+
+import models.Product;
+
 public interface ProductDBIF {
-    // TODO
+	public List<Product> getProducts();
 }

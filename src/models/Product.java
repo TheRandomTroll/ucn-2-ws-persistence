@@ -1,13 +1,17 @@
 package models;
 
+import models.enums.ProductType;
+
 public class Product {
 	private int id;
+	private int barcode;
 	private String name;
 	private double purchasePrice;
 	private double salesPrice;
 	private double rentPrice;
 	private String countryOfOrigin;
 	private int minStock;
+	private ProductType productType;
 
 	public int getId() {
 		return id;
@@ -15,6 +19,14 @@ public class Product {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public int getBarcode() {
+		return barcode;
+	}
+
+	public void setBarcode(int barcode) {
+		this.barcode = barcode;
 	}
 
 	public String getName() {
@@ -63,5 +75,28 @@ public class Product {
 
 	public void setMinStock(int minStock) {
 		this.minStock = minStock;
+	}
+
+	public ProductType getProductType() {
+		return productType;
+	}
+
+	public void setProductType(ProductType productType) {
+		this.productType = productType;
+	}
+
+	@Override
+	public String toString() {
+		return "Product{" +
+				"id=" + id +
+				", barcode=" + barcode +
+				", name='" + name + '\'' +
+				", purchasePrice=" + purchasePrice +
+				", salesPrice=" + salesPrice +
+				", rentPrice=" + rentPrice +
+				", countryOfOrigin='" + countryOfOrigin + '\'' +
+				", minStock=" + minStock +
+				", productType=" + productType +
+				'}';
 	}
 }
