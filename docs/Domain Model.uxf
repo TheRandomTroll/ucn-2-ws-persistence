@@ -12,6 +12,7 @@ city
 phoneno</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>880</x><y>360</y><w>150</w><h>140</h></coordinates><panel_attributes>Product
 --
 name
+barcode
 purchasePrice
 salesPrice
 rentPrice
