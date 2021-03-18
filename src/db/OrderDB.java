@@ -44,25 +44,29 @@ public class OrderDB implements OrderDBIF {
 			addOrderPS.setDouble(3, amount);
 			addOrderPS.setInt(4, DeliveryStatus.PROCESSING.getValue());
 			addOrderPS.setDate(5, deliveryDate);
-			
-			addOrderPS.executeQuery();
-			
-			int orderId = 0;
-			
-			ResultSet generatedKeys = addOrderPS.getGeneratedKeys());
-	        if (generatedKeys.next()) {
-	            orderId = generatedKeys.getInt(1);
-	        }
-	        else {
-	            throw new SQLException("Could not insert order, no ID obtained.");
-	        }
-	        
-	        Map<Integer, Long> counted = products.stream().collect(Collectors.groupingBy(Product::getId, Collectors.counting()));
 
-			for(Map.Entry<Integer, Long> entry : counted.entrySet()) {
-				
+			addOrderPS.executeQuery();
+
+			int orderId = 0;
+
+			ResultSet generatedKeys = addOrderPS.getGeneratedKeys();
+			if (generatedKeys.next()) {
+				orderId = generatedKeys.getInt(1);
+			} else {
+				throw new SQLException("Could not insert order, no ID obtained.");
 			}
-			
+
+			Map<Integer, Long> counted = products.stream()
+					.collect(Collectors.groupingBy(Product::getId, Collectors.counting()));
+
+			for (Map.Entry<Integer, Long> entry : counted.entrySet()) {
+				addOrderItemsPS.setInt(1, orderId);
+				addOrderItemsPS.setInt(2, entry.getKey());
+				addOrderItemsPS.setInt(3, entry.getValue().intValue());
+
+				addOrderItemsPS.executeQuery();
+			}
+
 		} catch (SQLException e) {
 			System.out.println("Could not insert order. Exception: " + e.getMessage());
 		}
